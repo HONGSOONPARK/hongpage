@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url("./resources/css/bootstrap.min.css");
+@import url("./resources/css/resume.css");
+@import url("./resources/css/fontawesome-free/all.min.css");
+
