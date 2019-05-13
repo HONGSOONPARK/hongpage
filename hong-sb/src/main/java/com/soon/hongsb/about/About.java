@@ -23,6 +23,10 @@ public class About {
     @Column
     private String name;
     @Column
+    private String age;
+    @Column
+    private String sex;
+    @Column
     private String phone;
     @Column
     private String addr;
@@ -37,6 +41,19 @@ public class About {
     @Column
     private String instagramUrl;
 
+    public String getAge() {
+        return age;
+    }
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
     public String getIntroduce() {
         return introduce;
     }
