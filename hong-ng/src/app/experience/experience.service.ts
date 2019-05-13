@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { About } from '../models/about.model';
+import { Experience } from '../models/experience.model';
 
 
 const httpOptions = {
@@ -9,15 +9,15 @@ const httpOptions = {
 };
 
 @Injectable()
-export class AboutService {
+export class ExperienceService {
 
   constructor(private http:HttpClient) {}
 
-  private aboutUrl = 'http://localhost:8080/hong-sb/about';
+  private experienceUrl = 'http://localhost:8080/hong-sb/experience';
   //private userUrl = '/api';
 
-  public getAbout() {
-    return this.http.get<About[]>(this.aboutUrl);
+  public getExperience() {
+    return this.http.get<Experience[]>(this.experienceUrl);
   }
 
 }

@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { About } from '../models/about.model';
+import { Navigation } from '../models/navigation.model';
 
 
 const httpOptions = {
@@ -9,15 +9,15 @@ const httpOptions = {
 };
 
 @Injectable()
-export class AboutService {
+export class NavigationService {
 
   constructor(private http:HttpClient) {}
 
-  private aboutUrl = 'http://localhost:8080/hong-sb/about';
+  private navigationUrl = 'http://localhost:8080/hong-sb/navigation';
   //private userUrl = '/api';
 
-  public getAbout() {
-    return this.http.get<About[]>(this.aboutUrl);
+  public getNavigation() {
+    return this.http.get<Navigation[]>(this.navigationUrl);
   }
 
 }

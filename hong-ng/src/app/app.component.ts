@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = '홍순의 앵습장';
+  // title = 'Angular Free Board  ~ ! ';
 }

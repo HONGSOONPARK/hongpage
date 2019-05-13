@@ -11,14 +11,14 @@ import { AboutService } from './about.service';
 })
 export class AboutComponent implements OnInit {
 
-  about: About[];
+  abouts: About[];
   constructor(private router: Router, private aboutService: AboutService) {
   }
 
   ngOnInit() {
     this.aboutService.getAbout()
       .subscribe( data => {
-        this.about = data;
+        this.abouts = data;
       });
   };
 

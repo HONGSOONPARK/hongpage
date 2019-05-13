@@ -1,0 +1,34 @@
+<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skill">
+    <div class="w-100">
+      <h2 class="mb-5">Skills</h2>
+
+      <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+      <ul class="list-inline dev-icons">
+        <li *ngFor="let skill of skills"  class="list-inline-item">
+          <i class="{{skill.skillId}}">
+            <p class="icon_info">{{skill.skillName}}</p>
+          </i>&nbsp;
+        </li>
+      </ul>
+
+
+
+      <div class="subheading mb-3">Workflow</div>
+      <ul class="fa-ul mb-0">
+        <li>
+          <i class="fa-li fa fa-check"></i>
+          Spring Framework</li>
+        <li>
+          <i class="fa-li fa fa-check"></i>
+          Cross Browser Testing &amp; Debugging</li>
+        <li>
+          <i class="fa-li fa fa-check"></i>
+          Cross Functional Teams</li>
+        <li>
+          <i class="fa-li fa fa-check"></i>
+          Agile Development &amp; Scrum</li>
+      </ul>
+    </div>
+  </section>
+
+  <hr class="m-0">

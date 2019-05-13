@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { About } from '../models/about.model';
+import { Portfolio } from '../models/portfolio.model';
 
 
 const httpOptions = {
@@ -9,15 +9,15 @@ const httpOptions = {
 };
 
 @Injectable()
-export class AboutService {
+export class PortfolioService {
 
   constructor(private http:HttpClient) {}
 
-  private aboutUrl = 'http://localhost:8080/hong-sb/about';
+  private portfolioUrl = 'http://localhost:8080/hong-sb/portfolio';
   //private userUrl = '/api';
 
-  public getAbout() {
-    return this.http.get<About[]>(this.aboutUrl);
+  public getPortfolio() {
+    return this.http.get<Portfolio[]>(this.portfolioUrl);
   }
 
 }

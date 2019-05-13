@@ -1,20 +1,27 @@
-<section *ngFor="let about of abouts" class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
-  <div class="w-100">
-    <h1 class="mb-0">{{about.name}}
-      <!-- <span class="text-primary">Taylor</span> -->
-    </h1>
-    <div class="subheading mb-5">{{about.addr}}
-      <a href="mailto:"{{about.email}}>{{about.email}}</a>
+<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about" >
+  
+  <div class="w-100" *ngFor="let about of abouts">
+      <h2 class="mb-5">About Me</h2>
+      <h1 class="mb-0">{{ about.name }} </h1>
+      <h2 class="mb-0"><span class="text-primary">{{ about.age }}, {{ about.sex }}</span></h2>
+      
+    <br/>
+    <div class="subheading mb-5">
+      <p>{{ about.phone }}</p>
+      <p><a href="mailto:phs39@naver.com">{{ about.email }}</a></p>
+      <p>{{ about.addr }}</p>
     </div>
-    <p class="lead mb-5">{{about.introduce}}</p>
+
+    <p class="lead mb-5">{{ about.introduce }}</p>
+
     <div class="social-icons">
-      <!-- <a href="{{about.instargramUrl}}">
+      <!-- <a href="{{about.faceBookUrl}}">
         <i class="fab fa-linkedin-in"></i>
-      </a>
-      <a href="{{about.githubUrl}}">
+      </a> -->
+      <a href="{{about.githubUrl}}" target="_blank">
         <i class="fab fa-github"></i>
       </a>
-      <a href="{{about.faceboocUrl}}">
+      <!-- <a href="{{about.instargramUrl}}">
         <i class="fab fa-facebook-f"></i>
       </a> -->
     </div>
