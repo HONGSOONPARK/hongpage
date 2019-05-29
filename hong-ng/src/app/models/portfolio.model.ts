@@ -8,6 +8,11 @@ export class Portfolio {
   endDate: string;
   contents: string;
   result: string;
-  detail: string;
+  detail1: string;
+  detail2: string;
+  detail3: string;
+  skill: string;
+  useYn: string;
+  imgUrl: string;
   orderNo: Int16Array;
 }

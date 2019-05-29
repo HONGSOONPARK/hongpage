@@ -211,17 +211,18 @@ a:hover, a:focus, a:active {
 
 .portfolio-div{
   position: relative;
-  float: left;
+  vertical-align: top;
   margin: 15px;
   width: 300px;
   height: auto;
 }
 
 .portfolio-img{
-   width: 300px;
-   height: 300px;
+   width: 250px;
+   height: 250px;
+
 }
 
 .portfolio-div i{
-  color: red;
+  /* color: red; */
 }

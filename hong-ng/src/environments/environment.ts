@@ -1,9 +1,16 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
+import {commonServerMetaData, Environment} from './environment.common';
 
-export const environment = {
-  production: false
+export const environment: Environment = {
+  production: false,
+  serverMetaData: {
+    protocol: 'http',
+    hostName: 'localhost',
+    portNumber: '8080',
+    ...commonServerMetaData
+  }
 };
 
 /*
