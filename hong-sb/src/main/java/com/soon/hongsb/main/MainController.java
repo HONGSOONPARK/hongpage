@@ -40,4 +40,10 @@ public class MainController {
     @GetMapping(path = {"/navigation"})
     public List<Navigation> findNavigation() {
         return navigationService.findAll(); }
+
+
+    @GetMapping(path = {"/test"})
+    public String testyo() {
+        return "서버떳다떳다비행기";
+    }
 }

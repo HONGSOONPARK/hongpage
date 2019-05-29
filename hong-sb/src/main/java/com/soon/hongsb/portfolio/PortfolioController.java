@@ -45,7 +45,7 @@ public class PortfolioController {
     }
 
     @GetMapping
-    public List<Portfolio> findAll(Sort sort) {
-        return portfolioService.findAll(sort);
+    public List<Portfolio> findAll() {
+        return portfolioService.findAll();
     }
 }

@@ -10,7 +10,7 @@ public interface PortfolioService {
 
     Portfolio delete(int no);
 
-    List<Portfolio> findAll(Sort sort);
+    List<Portfolio> findAll();
 
     Portfolio findById(int no);
 

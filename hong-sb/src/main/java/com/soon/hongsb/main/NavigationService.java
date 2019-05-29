@@ -1,5 +1,6 @@
 package com.soon.hongsb.main;
 
+
 import java.util.List;
 
 public interface NavigationService {

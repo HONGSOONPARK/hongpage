@@ -1,6 +1,7 @@
 package com.soon.hongsb.main;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -27,7 +28,7 @@ public class NavigationServiceImpl implements NavigationService {
 
     @Override
     public List<Navigation> findAll() {
-        return repository.findAll();
+        return repository.findAll(sortByOrderNoAsc());
     }
 
     @Override
@@ -38,5 +39,9 @@ public class NavigationServiceImpl implements NavigationService {
     @Override
     public Navigation update(Navigation navigation) {
         return repository.save(navigation);
+    }
+
+    private Sort sortByOrderNoAsc() {
+        return new Sort(Sort.Direction.ASC, "menuOrder");
     }
 }

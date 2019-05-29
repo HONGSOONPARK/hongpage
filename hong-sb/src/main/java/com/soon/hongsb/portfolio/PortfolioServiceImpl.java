@@ -27,7 +27,7 @@ public class PortfolioServiceImpl implements PortfolioService {
     }
 
     @Override
-    public List<Portfolio> findAll(Sort sort) {
+    public List<Portfolio> findAll() {
         return repository.findAll(sortByOrderNoAsc());
     }
 
