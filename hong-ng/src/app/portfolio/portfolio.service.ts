@@ -11,11 +11,9 @@ const httpOptions = {
 @Injectable()
 export class PortfolioService {
 
-  constructor(private http:HttpClient) {}
+  constructor(private http: HttpClient) {}
 
-  // private portfolioUrl = 'http://localhost:8080/hong-sb/portfolio';
   private portfolioUrl = `${RestAPIUrl.fullHostURL}/portfolio`;
-  //private userUrl = '/api';
 
   public getPortfolio() {
     return this.http.get<Portfolio[]>(this.portfolioUrl);

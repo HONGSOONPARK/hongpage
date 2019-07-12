@@ -11,11 +11,13 @@ const httpOptions = {
 @Injectable()
 export class SkillService {
 
-  constructor(private http:HttpClient) {}
+  constructor(private http: HttpClient) {}
 
   // private skillUrl = 'http://localhost:8080/hong-sb/skill';
+
   private skillUrl = `${RestAPIUrl.fullHostURL}/skill`;
-  //private userUrl = '/api';
+
+  // private userUrl = '/api';
 
   public getSkill() {
     return this.http.get<Skill[]>(this.skillUrl);

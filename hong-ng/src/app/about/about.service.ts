@@ -11,10 +11,9 @@ const httpOptions = {
 @Injectable()
 export class AboutService {
 
-  constructor(private http:HttpClient) {}
+  constructor(private http: HttpClient) {}
 
   private aboutUrl = `${RestAPIUrl.fullHostURL}/about`;
-  //private userUrl = '/api';
 
   public getAbout() {
     return this.http.get<About[]>(this.aboutUrl);

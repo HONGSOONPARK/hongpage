@@ -9,6 +9,13 @@ import { ExperienceComponent } from './experience/experience.component';
 import { SkillComponent } from './skill/skill.component';
 
 const routes: Routes = [
+  { path: '', component: AboutComponent,
+    children: [
+      { path: '', component: ExperienceComponent},
+      { path: '', component: SkillComponent}
+    ]
+  },
+
   { path: 'users', component: UserComponent },
   { path: 'add', component: AddUserComponent },
   { path: 'about', component: AboutComponent },

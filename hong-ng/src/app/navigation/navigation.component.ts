@@ -20,7 +20,7 @@ export class NavigationComponent implements OnInit {
       .subscribe( data => {
         this.navigations = data;
       });
-  };
+  }
 
 
 }

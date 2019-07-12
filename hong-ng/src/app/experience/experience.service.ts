@@ -11,11 +11,9 @@ const httpOptions = {
 @Injectable()
 export class ExperienceService {
 
-  constructor(private http:HttpClient) {}
+  constructor(private http: HttpClient) {}
 
-  // private experienceUrl = 'http://localhost:8080/hong-sb/experience';
   private experienceUrl = `${RestAPIUrl.fullHostURL}/experience`;
-  //private userUrl = '/api';
 
   public getExperience() {
     return this.http.get<Experience[]>(this.experienceUrl);

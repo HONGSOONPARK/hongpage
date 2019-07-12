@@ -20,7 +20,7 @@ export class PortfolioComponent implements OnInit {
       .subscribe( data => {
         this.portfolios = data;
       });
-  };
+  }
 
 
 }

@@ -23,7 +23,7 @@ import {ExperienceService} from './experience/experience.service';
 import {SkillService} from './skill/skill.service';
 import {PortfolioService} from './portfolio/portfolio.service';
 
-import {HttpClientModule} from "@angular/common/http";
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
