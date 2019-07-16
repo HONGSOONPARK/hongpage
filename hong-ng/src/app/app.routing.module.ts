@@ -7,6 +7,8 @@ import { AboutComponent } from './about/about.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { SkillComponent } from './skill/skill.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   { path: '', component: AboutComponent,
@@ -20,8 +22,10 @@ const routes: Routes = [
   { path: 'add', component: AddUserComponent },
   { path: 'about', component: AboutComponent },
   { path: 'navigation', component: NavigationComponent },
+  { path: 'portfolio', component: PortfolioComponent },
   { path: 'experience', component: ExperienceComponent },
-  { path: 'skill', component: SkillComponent }
+  { path: 'skill', component: SkillComponent },
+  { path: 'contact', component: ContactComponent }
 ];
 
 @NgModule({

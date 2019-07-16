@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { SkillComponent } from './skill/skill.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ContactComponent } from './contact/contact.component';
 
 // Serviece
 import {UserService} from './user/user.service';
@@ -22,6 +23,7 @@ import {NavigationService} from './navigation/navigation.service';
 import {ExperienceService} from './experience/experience.service';
 import {SkillService} from './skill/skill.service';
 import {PortfolioService} from './portfolio/portfolio.service';
+import {ContactService} from './contact/contact.service';
 
 import {HttpClientModule} from '@angular/common/http';
 
@@ -35,7 +37,8 @@ import {HttpClientModule} from '@angular/common/http';
     NavigationComponent,
     ExperienceComponent,
     SkillComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,7 @@ import {HttpClientModule} from '@angular/common/http';
     //   { path: 'experience', component: ExperienceComponent, data: {animation: 'ExperiencePage'} },
     // ])
   ],
-  providers: [UserService, AboutService, NavigationService, ExperienceService, SkillService, PortfolioService],
+  providers: [UserService, AboutService, NavigationService, ExperienceService, SkillService, PortfolioService, ContactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

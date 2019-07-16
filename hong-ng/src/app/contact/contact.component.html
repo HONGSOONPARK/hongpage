@@ -1,0 +1,43 @@
+<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="contact" >
+
+  <div class="w-100">
+      <h2 class="mb-5">Contact</h2>
+    <br/>
+
+    <div class="form-group">
+      <label for="Name">Name</label>
+      <input [(ngModel)]="contacts.name" placeholder="Name" name="name" class="form-control" id="name">
+    </div>
+
+    <div class="form-group">
+      <label for="Corp">Corp</label>
+      <input [(ngModel)]="contacts.corp" placeholder="Corp" name="corp" class="form-control" id="corp">
+    </div>
+
+    <div class="form-group">
+      <label for="Title">Title</label>
+      <input [(ngModel)]="contacts.title" placeholder="Title" name="title" class="form-control" id="title">
+    </div>
+
+    <div class="form-group">
+      <label for="Contents">Contents</label>
+      <textarea [(ngModel)]="contacts.contents" rows="10" placeholder="Contents" name="contents" class="form-control" id="contents"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="Tel">Tel</label>
+      <input [(ngModel)]="contacts.tel" placeholder="Tel" name="tel" class="form-control" id="tel">
+    </div>
+
+    <div class="form-group">
+      <label for="Email">Email</label>
+      <input type="email" [(ngModel)]="contacts.email"   placeholder="Email" name="email" class="form-control" id="email">
+    </div>
+
+    <button class="btn btn-success" (click)="createContact()">전송</button>
+
+  </div>
+
+</section>
+
+<hr class="m-0">
