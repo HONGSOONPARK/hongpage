@@ -3,6 +3,7 @@ package com.soon.hongsb.main;
 import com.soon.hongsb.about.About;
 import com.soon.hongsb.about.AboutService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +22,9 @@ import java.util.Map;
 @RestController
 @RequestMapping({"/"})
 public class MainController {
+
+    @Value("${PASS_ENV_KEY}")
+    private String ENCRYPT_KEY;
 
     @Autowired
     private NavigationService navigationService;
@@ -44,6 +48,6 @@ public class MainController {
 
     @GetMapping(path = {"/test"})
     public String testyo() {
-        return "서버떳다떳다비행기";
+        return ENCRYPT_KEY;
     }
 }
