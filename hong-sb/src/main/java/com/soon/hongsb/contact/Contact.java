@@ -31,7 +31,7 @@ public class Contact {
     @Column
     private String title;
 
-    @Column
+    @Column(columnDefinition="TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private Timestamp sendDate;
 
     public Timestamp getSendDate() {
