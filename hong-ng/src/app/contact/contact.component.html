@@ -1,43 +1,63 @@
 <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="contact" >
 
   <div class="w-100">
-      <h2 class="mb-5">Contact</h2>
+    <h2 class="mb-5">Contact</h2>
     <br/>
 
-    <div class="form-group">
-      <label for="Name">Name</label>
-      <input [(ngModel)]="contacts.name" placeholder="Name" name="name" class="form-control" id="name">
-    </div>
+    <form [formGroup]="mailForm" (ngSubmit)="createContact()">
+      <div class="txt_group">
+        <span class="reqQ">*</span><label for="Name">Name</label>
+        <!-- <input [(ngModel)]="contacts.name" placeholder="Name" name="name" class="form-control" id="name"> -->
+        <input placeholder="Name" name="name" class="form-control" id="name" formControlName="name" required>
+      </div>
 
-    <div class="form-group">
-      <label for="Corp">Corp</label>
-      <input [(ngModel)]="contacts.corp" placeholder="Corp" name="corp" class="form-control" id="corp">
-    </div>
+      <div class="txt_group">
+        <span class="reqQ">*</span><label for="Corp">Corp</label>
+        <input  placeholder="Corp" name="corp" class="form-control" id="corp" formControlName="corp" required>
+      </div>
 
-    <div class="form-group">
-      <label for="Title">Title</label>
-      <input [(ngModel)]="contacts.title" placeholder="Title" name="title" class="form-control" id="title">
-    </div>
+      <div class="txt_group">
+        <span class="reqQ">*</span><label for="Title">Title</label>
+        <input placeholder="Title" name="title" class="form-control" id="title" formControlName="title" required>
+      </div>
 
-    <div class="form-group">
-      <label for="Contents">Contents</label>
-      <textarea [(ngModel)]="contacts.contents" rows="10" placeholder="Contents" name="contents" class="form-control" id="contents"></textarea>
-    </div>
+      <div class="txt_group">
+        <span class="reqQ">*</span><label for="Contents">Contents</label>
+        <textarea rows="10" placeholder="Contents" name="contents" class="form-control" id="contents" formControlName="contents" required></textarea>
+      </div>
 
-    <div class="form-group">
-      <label for="Tel">Tel</label>
-      <input [(ngModel)]="contacts.tel" placeholder="Tel" name="tel" class="form-control" id="tel">
-    </div>
+      <div class="txt_group">
+        <span class="reqQ">*</span><label for="Tel">Tel<span *ngIf="mailForm.controls['tel'].hasError('pattern')">(<strong>숫자</strong>입력)</span></label>
+        <!-- <input #tel [(ngModel)]="contacts.tel" placeholder="Tel" name="tel" class="form-control" id="tel" formControlName="tel" required
+         ng-minlength="12" ng-maxlength="13" ng-pattern="/^\d{3}-\d{3,4}-\d{4}$/" (keyup)="hyphenAdd(tel.value)" > -->
 
-    <div class="form-group">
-      <label for="Email">Email</label>
-      <input type="email" [(ngModel)]="contacts.email"   placeholder="Email" name="email" class="form-control" id="email">
-    </div>
+         <input #tel placeholder="***-***-****" name="tel" class="form-control" id="tel" formControlName="tel" required (keyup)="hyphenAdd(tel.value)">
+      </div>
 
-    <button class="btn btn-success" (click)="createContact()">전송</button>
+      <div class="txt_group">
+        <span class="reqQ">*</span><label for="Email">Email</label>
+        <input type="email"  placeholder="Email" name="email" class="form-control" id="email" formControlName="email" required [email]="true">
+      </div>
+
+      <div class="btn_group">
+        <!-- <button class="btn btn-success" (click)="createContact()">전송</button> -->
+        <button type="submit" class="btn btn-success" [disabled]="!mailForm.valid">전송</button>
+      </div>
+
+    </form>
+
+
+    <!-- <form class="consumption-form" (ngSubmit)="onAdd()" [formGroup]="consumptionForm">
+        <input formControlName="amount" placeholder="Amount" type="text">
+         <p *ngIf="consumptionForm.controls.amount.hasError('pattern') && !consumptionForm.controls.amount.hasError('required')">
+           <strong>Numbers</strong> only
+         </p>
+           <p *ngIf="consumptionForm.controls.amount.hasError('required')"> Amount is <strong>required</strong> </p>
+      <button [disabled]="!consumptionForm.valid" mat-stroked-button color="accent" type="submit">Add</button>
+    </form> -->
+
 
   </div>
-
 </section>
 
 <hr class="m-0">

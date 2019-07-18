@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app.routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // Component
 import { AppComponent } from './app.component';
@@ -45,7 +45,8 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
     // RouterModule.forRoot([
     //   { path: '', pathMatch: 'full', redirectTo: '/' },
     //   { path: 'about', component: AboutComponent, data: {animation: 'AboutPage'} },
