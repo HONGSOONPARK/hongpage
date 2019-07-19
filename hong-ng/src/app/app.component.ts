@@ -13,8 +13,8 @@ import { slideInAnimation } from './animations';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  // template: '<router-outlet></router-outlet>',
+  // templateUrl: './app.component.html',
+  template: '<router-outlet></router-outlet>',
 
   styleUrls: ['./app.component.css'],
   animations: [

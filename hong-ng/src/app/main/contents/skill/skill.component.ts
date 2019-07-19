@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Skill } from '../models/skill.model';
+import { Skill } from '../../../models/skill.model';
 import { SkillService } from './skill.service';
 
 @Component({
@@ -20,7 +20,7 @@ export class SkillComponent implements OnInit {
       .subscribe( data => {
         this.skills = data;
       });
-  };
+  }
 
 
 }

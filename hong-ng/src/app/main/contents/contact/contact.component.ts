@@ -1,9 +1,9 @@
 import { element } from 'protractor';
-import { About } from './../models/about.model';
-import { Component} from '@angular/core';
+import { About } from '../../../models/about.model';
+import { Component, Input} from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Contact } from '../models/contact.model';
+import { Contact } from '../../../models/contact.model';
 import { ContactService } from './contact.service';
 
 import { Validators, FormGroup, FormControl, FormBuilder} from '@angular/forms';
@@ -15,6 +15,10 @@ import { Validators, FormGroup, FormControl, FormBuilder} from '@angular/forms';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
+
+  // color = 'primary';
+  // mode = 'indeterminate';
+  // value = 50;
 
   contacts: Contact = new Contact();
   constructor(private router: Router, private contactService: ContactService) {

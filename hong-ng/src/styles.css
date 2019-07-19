@@ -4,3 +4,6 @@
 @import url("./resources/css/resume.css");
 @import url("./resources/css/fontawesome-free/all.min.css");
  */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

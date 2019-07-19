@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Experience } from '../models/experience.model';
+import { Experience } from '../../../models/experience.model';
 import { ExperienceService } from './experience.service';
 
 @Component({
@@ -20,7 +20,7 @@ export class ExperienceComponent implements OnInit {
       .subscribe( data => {
         this.experiences = data;
       });
-  };
+  }
 
 
 }

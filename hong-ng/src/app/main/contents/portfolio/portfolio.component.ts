@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Portfolio } from '../models/portfolio.model';
+import { Portfolio } from '../../../models/portfolio.model';
 import { PortfolioService } from './portfolio.service';
+
 
 @Component({
   selector: 'app-portfolio',

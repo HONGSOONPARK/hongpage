@@ -12,7 +12,9 @@
       <ul class="navbar-nav">
         <li *ngFor="let navigation of navigations" class="nav-item" >
           <!-- <a href="#{{navigation.menuId}}"  class="nav-link js-scroll-trigger">{{navigation.menuName}}</a> -->
-          <a id="{{navigation.menuId}}" routerLink="/{{navigation.menuId}}" routerLinkActive="active" class="nav-link js-scroll-trigger">{{navigation.menuName}}</a>
+          <!-- <a id="{{navigation.menuId}}" routerLink="/{{navigation.menuId}}" routerLinkActive="active" class="nav-link js-scroll-trigger">{{navigation.menuName}}</a> -->
+          <!-- <a id="{{navigation.menuId}}" (click)="navClick(navigation.menuId)" class="nav-link js-scroll-trigger">{{navigation.menuName}}</a> -->
+          <a href="#" (click)="navClick(navigation.menuId)" class="nav-link js-scroll-trigger">{{navigation.menuName}}</a>
         </li>
       </ul>
     </div>

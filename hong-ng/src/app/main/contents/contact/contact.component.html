@@ -1,6 +1,6 @@
 <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="contact" >
 
-  <div class="w-100">
+  <div class="w-100" #contact>
     <h2 class="mb-5">Contact</h2>
     <br/>
 
@@ -31,7 +31,7 @@
         <!-- <input #tel [(ngModel)]="contacts.tel" placeholder="Tel" name="tel" class="form-control" id="tel" formControlName="tel" required
          ng-minlength="12" ng-maxlength="13" ng-pattern="/^\d{3}-\d{3,4}-\d{4}$/" (keyup)="hyphenAdd(tel.value)" > -->
 
-         <input #tel placeholder="***-***-****" name="tel" class="form-control" id="tel" formControlName="tel" required (keyup)="hyphenAdd(tel.value)">
+         <input #tel placeholder="tel" name="tel" class="form-control" id="tel" formControlName="tel" required (keyup)="hyphenAdd(tel.value)">
       </div>
 
       <div class="txt_group">
@@ -46,6 +46,17 @@
 
     </form>
 
+    <!-- <mat-card class="spinner-card">
+      <mat-card-content>
+        <mat-progress-spinner
+            class="example-margin"
+            [color]="color"
+            [mode]="mode"
+            [value]="value">
+        </mat-progress-spinner>
+      </mat-card-content>
+    </mat-card> -->
+
 
     <!-- <form class="consumption-form" (ngSubmit)="onAdd()" [formGroup]="consumptionForm">
         <input formControlName="amount" placeholder="Amount" type="text">
@@ -58,6 +69,7 @@
 
 
   </div>
+
 </section>
 
 <hr class="m-0">
