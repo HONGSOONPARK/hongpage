@@ -28,7 +28,7 @@ public class PortfolioController {
         return portfolioService.create(portfolio);
     }
 
-    @GetMapping(path = {"/{no}"})
+    @GetMapping(path = {"/find/{no}"})
     public Portfolio findOne(@PathVariable("no") int no) {
         return portfolioService.findById(no);
     }
