@@ -13,6 +13,8 @@ import { AboutComponent } from './main/contents/about/about.component';
 import { ExperienceComponent } from './main/contents/experience/experience.component';
 import { SkillComponent } from './main/contents/skill/skill.component';
 import { PortfolioComponent } from './main/contents/portfolio/portfolio.component';
+import { PortfolioDetailsComponent } from './main/contents/portfolio/portfolio-details/portfolio-details.component';
+
 import { ContactComponent } from './main/contents/contact/contact.component';
 
 
@@ -24,6 +26,10 @@ const routes: Routes = [
       {
         path: '',
         component: ContentsComponent,
+      },
+      {
+        path: 'detail/:no',
+        component: PortfolioDetailsComponent,
       }
     ]
   },
@@ -32,7 +38,15 @@ const routes: Routes = [
   { path: 'add', component: AddUserComponent },
   { path: 'about', component: AboutComponent },
   { path: 'navigation', component: NavigationComponent },
-  { path: 'portfolio', component: PortfolioComponent },
+  { path: 'portfolio', component: PortfolioComponent,
+  //   children: [
+  //   {
+  //     path: 'detail/:id',
+  //     component: PortfolioDetailsComponent,
+  //   }
+  // ]
+},
+  { path: 'detail/:no', component: PortfolioDetailsComponent },
   { path: 'experience', component: ExperienceComponent },
   { path: 'skill', component: SkillComponent },
   { path: 'contact', component: ContactComponent }

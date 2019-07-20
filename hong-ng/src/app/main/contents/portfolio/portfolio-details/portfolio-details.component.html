@@ -1,0 +1,13 @@
+<p>
+  portfolio-details works!
+</p>
+
+
+<div *ngIf="portfolio">
+    {{portfolio.no}}
+    {{portfolio.category}}
+    {{portfolio.contents}}
+    {{portfolio.corp}}
+    {{portfolio.projectTitle}}
+</div>
+<button (click)="goBack()">뒤로가기</button>

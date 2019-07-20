@@ -30,7 +30,11 @@
               "src/resources/css/ihover.css",
               "src/resources/css/fontawesome-free/all.min.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "src/resources/js/jquery/jquery.js",
+              "src/resources/js/bootstrap/js/bootstrap.js",
+              "src/resources/js/resume.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {

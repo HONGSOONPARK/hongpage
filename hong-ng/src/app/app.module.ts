@@ -12,7 +12,6 @@ import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {AllMaterialModule} from './material.module';
 
 
-
 // Component
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
@@ -37,6 +36,7 @@ import {ContactService} from './main/contents/contact/contact.service';
 import {HttpClientModule} from '@angular/common/http';
 import { MainComponent } from './main/main.component';
 import { ContentsComponent } from './main/contents/contents.component';
+import { PortfolioDetailsComponent } from './main/contents/portfolio/portfolio-details/portfolio-details.component';
 
 
 @NgModule({
@@ -51,7 +51,8 @@ import { ContentsComponent } from './main/contents/contents.component';
     PortfolioComponent,
     ContactComponent,
     MainComponent,
-    ContentsComponent
+    ContentsComponent,
+    PortfolioDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +62,7 @@ import { ContentsComponent } from './main/contents/contents.component';
     FormsModule,
     ReactiveFormsModule,
     AllMaterialModule,
-    MatNativeDateModule
+    MatNativeDateModule,
 
     // RouterModule.forRoot([
     //   { path: '', pathMatch: 'full', redirectTo: '/' },

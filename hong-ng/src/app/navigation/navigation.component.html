@@ -14,9 +14,11 @@
           <!-- <a href="#{{navigation.menuId}}"  class="nav-link js-scroll-trigger">{{navigation.menuName}}</a> -->
           <!-- <a id="{{navigation.menuId}}" routerLink="/{{navigation.menuId}}" routerLinkActive="active" class="nav-link js-scroll-trigger">{{navigation.menuName}}</a> -->
           <!-- <a id="{{navigation.menuId}}" (click)="navClick(navigation.menuId)" class="nav-link js-scroll-trigger">{{navigation.menuName}}</a> -->
-          <a href="#" (click)="navClick(navigation.menuId)" class="nav-link js-scroll-trigger">{{navigation.menuName}}</a>
+          <a (click)="navClick(navigation.menuId)" class="nav-link js-scroll-trigger">{{navigation.menuName}}</a>
         </li>
       </ul>
     </div>
 </nav>
 <!-- <router-outlet></router-outlet> -->
+
+

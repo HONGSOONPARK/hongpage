@@ -3,29 +3,27 @@
     <h2 class="mb-5">Portfolio</h2>
 
     <div *ngFor="let portfolio of portfolios" class="portfolio-div ih-item square effect13 top_to_bottom">
-      <a href="">
+      <a>
         <div class="portfolio-img">
           <img class="img-responsive" src="assets/img/{{portfolio.imgUrl}}" alt="{{portfolio.corp}}" title="{{portfolio.projectTitle}}" />
         </div>
 
-        <div class="info">
-          <h3>보기</h3>
-          <p>클릭</p>
+        <div class="">
+          <h3><a routerLink="detail/{{portfolio.no}}" >보기</a></h3>
+          <!-- <p>
+            클릭
+          </p> -->
         </div>
       </a>
 
       <div>
         {{portfolio.skill}}
       </div>
-
+      {{portfolio.no}}
       <i class="fab fa-java" ><p class="icon_info">Java</p></i>&nbsp;
       <i class="fab fa-square" ><p class="icon_info">Javascript</p></i>&nbsp;
       <i class="fab fa-js-stripe-s" ><p class="icon_info">Spring </p></i>&nbsp;
     </div>
-
-
-
-
 
   </div>
 </section>
