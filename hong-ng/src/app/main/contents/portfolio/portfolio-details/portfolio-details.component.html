@@ -1,13 +1,35 @@
-<p>
-  portfolio-details works!
-</p>
+<!-- <div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+  <a class="navbar-brand js-scroll-trigger" href="">
+    <span class="d-block d-lg-none">Park Hong Soon</span>
+    <span class="d-none d-lg-block">
+    </span>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse"  aria-expanded="false" aria-label="Toggle navigation">
+    <div class="btn_group">
+      <button (click)="locationBackAngular()"class="btn btn-success" >뒤로가기</button>
+    </div>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+        <p>{{portfolio.corp}}</p>
+        <p>{{portfolio.projectTitle}}</p>
+      <div class="btn_group">
+        <button (click)="locationBackAngular()"class="btn btn-success" >뒤로가기</button>
+      </div>
+    </ul>
+  </div>
+</nav>
+</div> -->
 
 
-<div *ngIf="portfolio">
-    {{portfolio.no}}
-    {{portfolio.category}}
-    {{portfolio.contents}}
-    {{portfolio.corp}}
-    {{portfolio.projectTitle}}
+<div class="wrapDetails">
+  <div *ngIf="portfolio">
+      <p>{{portfolio.no}}</p>
+      <p>{{portfolio.category}}</p>
+      <p>{{portfolio.contents}}</p>
+      <p>{{portfolio.corp}}</p>
+      <p>{{portfolio.projectTitle}}</p>
+  </div>
 </div>
-<button (click)="goBack()">뒤로가기</button>
+<button (click)="locationBackAngular()">뒤로가기</button>

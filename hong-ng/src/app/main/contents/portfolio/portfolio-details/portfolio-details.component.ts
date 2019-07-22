@@ -15,10 +15,7 @@ export class PortfolioDetailsComponent implements OnInit {
 
   portfolio: Portfolio;
 
-  constructor(
-      private location: Location,
-      private route: ActivatedRoute,
-      private portfolioDetailsService: PortfolioDetailsService ) {}
+  constructor(private location: Location, private route: ActivatedRoute, private portfolioDetailsService: PortfolioDetailsService ) {}
 
   ngOnInit() {
     this.getPortfolioNo();
@@ -30,6 +27,9 @@ export class PortfolioDetailsComponent implements OnInit {
       .subscribe(portfolio => this.portfolio = portfolio);
   }
 
+  locationBackAngular(): void {
+    this.location.back();
+  }
   goBack(): void {
     this.location.back();
   }

@@ -1,20 +1,30 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, HostBinding, ViewChild} from '@angular/core';
+import { Router, RouterOutlet } from '@angular/router';
+
+import { Location } from '@angular/common';
 
 import { Portfolio } from '../../../models/portfolio.model';
 import { PortfolioService } from './portfolio.service';
-
+import { PortfolioDetailsComponent } from './portfolio-details/portfolio-details.component';
+import { slideInAnimation } from 'src/app/animations';
 
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
-  styles: []
+  styles: [],
+  animations: [ slideInAnimation]
 })
 export class PortfolioComponent implements OnInit {
-
-  portfolios: Portfolio[];
-  constructor(private router: Router, private portfolioService: PortfolioService) {
+  constructor(private router: Router, private portfolioService: PortfolioService, private location: Location) {
   }
+  portfolios: Portfolio[];
+
+  // @HostBinding('@.disabled')
+  // public animationsDisabled = false;
+
+  // prepareRoute(outlet: RouterOutlet) {
+  //   return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
+  // }
 
   ngOnInit() {
     this.portfolioService.getPortfolio()
@@ -23,6 +33,13 @@ export class PortfolioComponent implements OnInit {
       });
   }
 
+  // locationBack() {
+  //   window.history.back();
+  // }
+
+  // locationBackAngular() {
+  //   this.location.back();
+  // }
 
 
 }

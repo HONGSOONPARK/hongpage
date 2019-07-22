@@ -1,6 +1,4 @@
-import { A11yModule } from '@angular/cdk/a11y';
-import { ScrollingModule } from '@angular/cdk/scrolling';
-import { Component, OnInit, ElementRef, EventEmitter, Input, Output } from '@angular/core';
+import { Component, OnInit, ElementRef} from '@angular/core';
 import { Router } from '@angular/router';
 
 import { Navigation } from '../models/navigation.model';
@@ -9,18 +7,14 @@ import { NavigationService } from './navigation.service';
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
-  styles: []
+  styles: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
 
   top = 0;
   navigations: Navigation[];
-  constructor(private router: Router, private navigationService: NavigationService, private hostElementRef: ElementRef<HTMLElement>) {
+  constructor(private router: Router, private navigationService: NavigationService) {
   }
-
-  // @Output('menuListItemClick')
-  // private readonly menuListItemClickEmitter: EventEmitter<string> = new EventEmitter<string>();
-
 
   ngOnInit() {
     this.navigationService.getNavigation()
@@ -28,8 +22,6 @@ export class NavigationComponent implements OnInit {
         this.navigations = data;
       });
   }
-
-
 
   navClick(el: any) {
 

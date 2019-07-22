@@ -196,6 +196,8 @@ section.resume-section .resume-item .resume-date {
 
 a {
   color: #2c3e50;
+  cursor: pointer;
+
 }
 
 a:hover, a:focus, a:active {
@@ -222,3 +224,5 @@ a:hover, a:focus, a:active {
    height: 250px;
 
 }
+
+
